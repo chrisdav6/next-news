@@ -1,4 +1,5 @@
 import React from 'react';
+import Toolbar from '../../components/Toolbar';
 import { useRouter } from 'next/router';
 import styles from '../../styles/Feed.module.css';
 
@@ -39,6 +40,7 @@ const Feed = ({ pageNumber, articles }) => {
 
   return (
     <div className='page-container'>
+      <Toolbar />
       <div className={styles.main}>
         {articles.map((article, idx) => (
           <div key={idx} className={styles.post}>
