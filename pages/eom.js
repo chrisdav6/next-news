@@ -1,4 +1,5 @@
 import React from 'react';
+import Toolbar from '../components/Toolbar';
 import EOMstyles from '../styles/EOM.module.css';
 
 export const getServerSideProps = async context => {
@@ -15,6 +16,7 @@ export const getServerSideProps = async context => {
 const EOM = ({ employee }) => {
   return (
     <div className='page-container'>
+      <Toolbar />
       <div className={EOMstyles.main}>
         <h1>Employee of the Month!</h1>
 
