@@ -3,7 +3,7 @@ import Toolbar from '../components/Toolbar';
 import EOMstyles from '../styles/EOM.module.css';
 
 export const getServerSideProps = async context => {
-  const apiRes = await fetch('http://localhost:3000/api/eom');
+  const apiRes = await fetch('https://next-news-jgfki20cq.vercel.app/api/eom');
   const data = await apiRes.json();
   const employee = data[0].employeeOfTheMonth;
 
