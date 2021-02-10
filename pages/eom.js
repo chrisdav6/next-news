@@ -3,8 +3,9 @@ import Toolbar from '../components/Toolbar';
 import EOMstyles from '../styles/EOM.module.css';
 
 export const getServerSideProps = async context => {
-  const apiRes = await fetch('http://localhost:8000/employeeOfTheMonth');
-  const employee = await apiRes.json();
+  const apiRes = await fetch('http://localhost:3000/api/eom');
+  const data = await apiRes.json();
+  const employee = data[0].employeeOfTheMonth;
 
   return {
     props: {
@@ -14,6 +15,7 @@ export const getServerSideProps = async context => {
 };
 
 const EOM = ({ employee }) => {
+  console.log(employee);
   return (
     <div className='page-container'>
       <Toolbar />
